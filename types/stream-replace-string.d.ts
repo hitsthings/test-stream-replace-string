@@ -1,6 +1,16 @@
 
 declare module "stream-replace-string" {
-    const replace : (str: string, replaceWith: string, options?: any) => void
+    import { Transform, Readable } from 'node:stream';
 
-    export default replace
+    interface Options {
+        limit?: number;
+        bufferReplaceStream?: boolean;
+    }
+
+    type ReplaceStr = string | Promise<string>;
+    type ReplacerFunc = (matches?: number) => ReplaceStr;
+
+    function replace(searchStr: string, replaceWith: ReplaceStr | ReplacerFunc | Readable, options?: Options): Transform;
+
+    export default replace;
 }

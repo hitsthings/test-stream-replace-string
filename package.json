@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build:normal": "tsc --project tsconfig.json",
     "build:types": "tsc --project tsconfig.types.json"
