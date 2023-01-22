@@ -1,7 +1,7 @@
 # Showing issue with stream-replace-string type declarations
 
-Use `npm run build:normal` to get the error you would get with a normal import.
-Use `npm run build:types` to declare the module with a custom typing in the types/ folder that seems to work.
+- Use `npm run build:normal` to get the error you would get with a normal import.
+- Use `npm run build:types` to declare the module with a custom typing in the types/ folder that seems to work.
 
 The error I get is:
 
